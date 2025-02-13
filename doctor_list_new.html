@@ -87,7 +87,7 @@
     <script>
         get_doctor_api();
         function get_doctor_api() {
-            fetch('http://localhost:3000/getDoctors')
+            fetch('https://bn-wadeelada47s-projects.vercel.app/getDoctors')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -128,7 +128,7 @@
             document.getElementById('FormModalLabel').innerHTML = "แก้ไขข้อมูลแพทย์";
             document.getElementById('edit_type').value="update";
             document.getElementById('form_docter_id').style.display = "block";
-            fetch('http://localhost:3000/getDoctor/'+id)
+            fetch('https://bn-wadeelada47s-projects.vercel.app/getDoctor/'+id)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -160,7 +160,7 @@
             if (doctor_name_f.trim() == "" || doctor_phone_f.trim() == "") {
                 alert("กรุณากรอกข้อมูลให้ถูกต้อง");
             } else {
-                const apiUrl = (edit_type_f=="new")?'http://localhost:3000/addDoctor':"http://localhost:3000/editDoctor";
+                const apiUrl = (edit_type_f=="new")?'https://bn-wadeelada47s-projects.vercel.app/addDoctor':"https://bn-wadeelada47s-projects.vercel.app/editDoctor";
                 
                 const data = {
                     doctor_id:doctor_ID_f,
